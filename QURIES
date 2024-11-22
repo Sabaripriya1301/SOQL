@@ -1,0 +1,16 @@
+SELECT Id,Name FROM Account
+
+SELECT Id,Name FROM Contact WHERE LastName = 'm'
+
+SELECT Id,Name FROM Opportunity ORDER BY CloseDate DESC
+
+SELECT Id,Name FROM Opportunity LIMIT 5
+
+SELECT Id,Name FROM Opportunity LIMIT 10 OFFSET 5
+
+SELECT Id, Name, (SELECT Id, FirstName, LastName FROM Contacts) FROM Account
+
+SELECT Id, FirstName, LastName, Account.Name FROM Contact
+
+SELECt COUNT(Id)  FROM Opportunity WHERE StageName = 'Closed Won'
+
